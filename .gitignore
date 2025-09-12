@@ -1,0 +1,23 @@
+# Môi trường ảo
+venv/
+.env
+
+# File cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# File cấu hình IDE/Editor
+.vscode/
+.idea/
+
+# File hệ thống
+.DS_Store
+Thumbs.db
+
+# Database tạm
+*.sqlite3
+
+# Logs
+*.log
