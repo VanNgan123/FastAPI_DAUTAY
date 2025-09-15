@@ -17,20 +17,11 @@ model= YOLO(dir_model)
 app =FastAPI()
 
 
-
 UPLOAD_DIR = "uploads"
 RESULT_DIR = "results"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 os.makedirs(RESULT_DIR, exist_ok=True)
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello FastAPI on Render"}
-
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))  # ép kiểu int
-    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)
 
 
 
