@@ -9,12 +9,24 @@ import shutil
 from starlette.responses import FileResponse, JSONResponse
 import uvicorn
 
+from fastapi.middleware.cors import CORSMiddleware
+
+
 dir_model = r"best.pt"
 
 model= YOLO(dir_model)
 
 
 app =FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 UPLOAD_DIR = "uploads"
